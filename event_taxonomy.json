@@ -1,0 +1,174 @@
+{
+    "other": {
+        "other":{
+            "description": "Other events.",
+            "sentiment": 0
+        }
+    },
+    "Diplomatic and Cooperative Actions": {
+        "other": {
+            "description": "Other diplomatic and cooperative actions.",
+            "sentiment": 0
+        },
+        "Confidence‑Building Measure":{"description":"A series of actions taken by countries to build trust and reduce tensions between them, often involving diplomatic or military measures.", "sentiment": 3},
+        "Diplomatic Negotiation": {"description": "The process of high-level discussions between official representatives aimed at resolving issues or reaching agreements.", "sentiment": 6},
+        "Alliance Formation": {"description": "The establishment of a formal partnership or treaty between entities for mutual benefit or defense.", "sentiment": 8},
+        "International Summit": {"description": "A formal meeting of leaders or representatives from multiple countries convened to discuss and collaborate on specific global or regional issues.", "sentiment": 6},
+        "Treaty Signing": {"description": "The formal conclusion and signing of an agreement between nations or parties, establishing obligations or cooperation.", "sentiment": 8},
+        "Mediation Effort": {"description": "An intervention by a neutral party to help resolve a dispute or conflict between other parties through facilitated negotiation.", "sentiment": 5},
+        "Peace Initiative": {"description": "An action or proposal aimed at reducing hostilities or establishing long-term peace between conflicting parties.", "sentiment": 9},
+        "Cooperative Agreement": {"description": "A formal arrangement between entities to work together on shared goals, projects, or initiatives for mutual benefit.", "sentiment": 7},
+        "Humanitarian Assistance": {"description": "The provision of aid and relief to populations in need, often coordinated internationally to alleviate suffering during crises or disasters.", "sentiment": 8},
+        "Diplomatic Visit": {"description": "An official visit by a government or organizational representative to another country or entity to improve relations or discuss cooperative matters.", "sentiment": 5}
+    },
+    "Political Governance and Policy Events": {
+        "other": {
+            "description": "Other political governance and policy events.",
+            "sentiment": 0
+        },
+        "Election": {"description": "A formal process in which citizens vote to choose public officials or decide on policy issues, determining the leadership or direction of governance.", "sentiment": 0},
+        "Government Formation": {"description": "The process of establishing a new government or administration, often involving coalition-building or appointments after an election or political transition.", "sentiment": 0},
+        "Legislation Enactment": {"description": "The passage and implementation of a new law or set of laws by the legislative body and its approval by the executive, making the laws officially in force.", "sentiment": 0},
+        "Cabinet Reshuffle": {"description": "A reorganization of a government's executive leadership, involving the appointment, removal, or reassignment of ministers or key officials.", "sentiment": 0},
+        "Referendum": {"description": "A direct vote in which the electorate is asked to either accept or reject a specific proposal, law, or policy, with the outcome often binding or influential for governance.", "sentiment": 0},
+        "Political Resignation": {"description": "The voluntary departure of a public official from office, often due to scandal, disagreement, or policy failure, leading to a vacancy or succession.", "sentiment": -1},
+        "Coup d`État": {"description": "The sudden and illegal seizure of state power by a faction, military, or political group, typically replacing the existing leadership and altering the government structure.", "sentiment": -8},
+        "Constitutional Reform": {"description": "Significant changes or amendments made to a nation's constitution or foundational legal framework, altering the structure of government or rights of citizens.", "sentiment": 0},
+        "Impeachment": {"description": "The formal process by which a legislative body brings charges against a high-ranking official (such as a president or judge) for misconduct, potentially leading to removal from office if convicted.", "sentiment": -3}
+    },
+    "Expressions of Dissent and Disapproval": {
+        "other": {
+            "description": "Other expressions of dissent and disapproval.",
+            "sentiment": 0
+        },
+        "Peaceful Protest": {"description": "An organized public demonstration where participants gather to express opposition or advocate for change without the use of violence.", "sentiment": -2},
+        "Riot": {"description": "A tumultuous and violent disturbance of the public order by a crowd, expressing grievance or anger and often involving clashes with authorities or property damage.", "sentiment": -7},
+        "Strike": {"description": "A collective action in which workers refuse to work, as a form of protest against employment conditions, wages, or policies, aiming to pressure change.", "sentiment": -3},
+        "Public Criticism": {"description": "An open expression of disapproval or condemnation by individuals, media, or organizations toward an action, policy, or decision of an authority or group.", "sentiment": -2},
+        "Civil Disobedience": {"description": "The deliberate and public refusal to obey certain laws, regulations, or commands of a government or authority as a form of protest, usually nonviolent in nature.", "sentiment": -3},
+        "Boycott": {"description": "A form of protest in which individuals or groups refuse to purchase, use, or participate in something as a means to express disapproval or to pressure change in policies or behavior.", "sentiment": -4},
+        "Hunger Strike": {"description": "A type of protest where an individual or group refuses to eat in order to draw attention to a cause or grievance and pressure authorities to meet specific demands.", "sentiment": -4},
+        "Public Petition": {"description": "A formal appeal or request signed by a large number of people and submitted to authorities, expressing collective concerns or requesting specific action or change.", "sentiment": -1}
+    },
+    "Coercion, Conflict, and Security Events": {
+        "other": {
+            "description": "Other coercion, conflict, and security events.",
+            "sentiment": 0
+        },
+        "Threat of Force": {"description": "A declaration or indication by an actor of an intent to use military or other coercive measures against another party if certain demands are not met.", "sentiment": -6},
+        "Military Attack": {"description": "An aggressive action undertaken by armed forces using weapons or force against a target, intended to damage, defeat, or deter an adversary.", "sentiment": -10},
+        "Terrorist Act": {"description": "A violent act, often targeting civilians or symbolic targets, carried out by non-state actors with the intent to instill fear and advance a political, ideological, or religious agenda.", "sentiment": -10},
+        "Armed Conflict": {"description": "Sustained, organized fighting between states, groups, or armed factions, ranging from small-scale skirmishes to full-scale war, often involving significant casualties and destruction.", "sentiment": -9},
+        "Peacekeeping Deployment": {"description": "The dispatch of neutral military or police forces, often under international mandate, to a conflict zone in order to monitor ceasefires and help maintain peace and security.", "sentiment": 3},
+        "Military Mobilization": {"description": "The act of assembling and preparing military forces and resources for active deployment or combat, often in response to escalating tensions or conflict.", "sentiment": -6},
+        "Cyber Attack": {"description": "A malicious attempt to damage, disrupt, or gain unauthorized access to computer systems, networks, or digital infrastructure, potentially causing security breaches or operational failures.", "sentiment": -7},
+        "Guerrilla Warfare": {"description": "A form of irregular warfare in which small groups of combatants use surprise attacks, ambushes, and mobility to fight a larger, less-mobile traditional military.", "sentiment": -8},
+        "Ceasefire Agreement": {"description": "A negotiated pact between conflicting parties to halt hostilities for a period of time, often as a step toward broader peace negotiations or conflict resolution.", "sentiment": 5},
+        "Security Crackdown": {"description": "Intensified enforcement actions by authorities aimed at controlling or suppressing unrest, dissent, or perceived threats, often involving arrests, curfews, or military presence.", "sentiment": -6},
+        "Assassination": {"description": "The targeted killing of a prominent individual, such as a political leader or public figure, often for political or ideological motives, typically planned and executed covertly.", "sentiment": -10}
+    },
+    "Legal and Judicial Actions": {
+        "other": {
+            "description": "Other legal and judicial actions.",
+            "sentiment": 0
+        },
+        "Administrative Review":{"description":"The process of reviewing and evaluating the actions of a government or administrative body to determine if they are consistent with the law and constitution.", "sentiment": 0},
+        "Antitrust and Competition Enforcement":{"description":"The enforcement of laws and regulations by government agencies or regulatory bodies to ensure compliance and maintain order.", "sentiment": 0},
+        "Regulatory Enforcement":{"description":"The enforcement of laws and regulations by government agencies or regulatory bodies to ensure compliance and maintain order.", "sentiment": -1},
+        "Regulatory Guidance":{"description":"The provision of official instructions or recommendations by regulatory bodies to clarify or explain the application of laws or regulations.", "sentiment": 0},
+        "Sanctions Enforcement":{"description":"The implementation of penalties or restrictions by one entity (often a government) against another entity (such as a country or organization) for noncompliance with laws or policies.", "sentiment": -5},
+        "Judicial Review": {"description": "A legal process in which a court reviews the actions of a government or administrative body to determine if they are consistent with the law and constitution.", "sentiment": 0},
+        "Investigation Initiation": {"description": "The formal start of an inquiry by law enforcement or regulatory authorities into suspected wrongdoing, aimed at gathering evidence and determining whether legal action is warranted.", "sentiment": -1},
+        "Arrest": {"description": "The act of detaining an individual by legal authority on suspicion of having committed a crime, typically to initiate the legal process against the accused.", "sentiment": -2},
+        "Indictment": {"description": "A formal accusation issued by a grand jury or prosecutor charging an individual or organization with a criminal offense, indicating that a case will proceed to trial.", "sentiment": -3},
+        "Criminal Trial": {"description": "A judicial proceeding in which evidence is presented in court to determine an accused individual's guilt or innocence for alleged criminal charges.", "sentiment": -1},
+        "Conviction": {"description": "A legal finding by a court or jury that an individual is guilty of the crime with which they were charged, typically resulting in a criminal record and pending sentencing.", "sentiment": -2},
+        "Acquittal": {"description": "A legal judgment, often by a judge or jury, that an accused individual is not guilty of the charges against them, resulting in their release from those charges.", "sentiment": 2},
+        "Sentencing": {"description": "The judicial determination of a punishment for a convicted individual, where a judge formally assigns penalties such as imprisonment, fines, or other measures.", "sentiment": -2},
+        "Appeal": {"description": "A legal process in which the decision of a lower court is reviewed by a higher court at the request of a party, seeking a reversal or modification of the original decision.", "sentiment": 0},
+        "Pardon": {"description": "An executive decision by a head of state or competent authority to forgive an individual's criminal offense and eliminate or reduce the associated penalties.", "sentiment": 3},
+        "Extradition": {"description": "The official process by which one jurisdiction surrenders a suspected or convicted criminal to another jurisdiction where the individual is wanted for trial or punishment.", "sentiment": -1},
+        "Civil Lawsuit": {"description": "A legal action initiated by a private individual, group, or entity against another party in a civil court, typically seeking compensation or injunction rather than criminal sanctions.", "sentiment": -1},
+        "Court Ruling": {"description": "A formal decision issued by a court or judge on a legal matter, which may resolve a case or interpret the law and can set legal precedents, especially if from a higher court.", "sentiment": 0}
+    },
+    "Technology, Infrastructure, and Environment": {
+        "other": {
+            "description": "Other technology, infrastructure, and environment events.",
+            "sentiment": 0
+        },
+        "Digital Infrastructure and Cybersecurity Cooperation":{"description":"The cooperation between countries or organizations to improve the security and reliability of digital infrastructure and networks.", "sentiment": 3},
+        "Infrastructure Development": {"description": "The planning and construction of major public works or facilities (such as roads, bridges, ports, or buildings) aimed at improving economic capacity and public services.", "sentiment": 5},
+        "Technological Breakthrough": {"description": "A significant innovation or discovery in science and technology that represents a major advance in capability, knowledge, or efficiency.", "sentiment": 6},
+        "Cybersecurity Incident": {"description": "A breach or attack on digital systems and networks that compromises data or disrupts services, requiring defensive responses and potentially impacting security or operations.", "sentiment": -4},
+        "Satellite Launch": {"description": "The deployment of a satellite or spacecraft into orbit, often marking progress in space technology, communication capabilities, or scientific research.", "sentiment": 3},
+        "Environmental Disaster": {"description": "A catastrophic event affecting the natural environment, such as an oil spill, nuclear accident, or extreme natural disaster, which causes widespread harm to ecosystems and human communities.", "sentiment": -9},
+        "Climate Agreement": {"description": "A formal accord between countries or parties to address climate change and environmental protection, setting targets for emissions reductions and strategies for sustainability.", "sentiment": 7},
+        "Energy Project": {"description": "The initiation or completion of a major venture related to energy production or infrastructure, such as constructing a power plant, pipeline, or renewable energy facility.", "sentiment": 3},
+        "Public Health Emergency": {"description": "A widespread health crisis, like an epidemic or pandemic, that poses significant risk to a population and triggers large-scale responses in public health and policy measures.", "sentiment": -8},
+        "Infrastructure Failure": {"description": "A significant breakdown or collapse of critical infrastructure (like power grids, bridges, or water systems) resulting in service disruption and potentially public safety risks.", "sentiment": -7},
+        "Resource Discovery": {"description": "The finding of significant new natural resources (such as oil, natural gas, or minerals), which can have substantial economic and strategic implications for the involved parties.", "sentiment": 4},
+        "Infrastructure Operations and Logistics":{"description": "The planning, management, and execution of operations and logistics for infrastructure systems, including transportation, energy, and communication networks.", "sentiment": 0}
+    },
+    "Economic and Financial Event": {
+        "other": {
+            "description": "Other economic and financial events.",
+            "sentiment": 0
+        },
+        "Macroeconomic Conditions and Data Releases": {
+          "description": "Major official data and revisions that signal the state of the economy (e.g., GDP, inflation/CPI-PPI, employment/unemployment, PMIs, retail sales, trade balance).",
+          "sentiment": 0
+        },
+        "Monetary, FX and Capital Flow Policy": {
+          "description": "Central-bank decisions and guidance (rates, balance-sheet tools, reserve requirements), foreign-exchange interventions and currency regimes, capital controls, and related capital-flow measures.",
+          "sentiment": 0
+        },
+        "Fiscal, Budget and Price Measures": {
+          "description": "Budgets and appropriations, tax changes, stimulus/austerity, subsidies and transfers, and price-control policies with macro or sector impact.",
+          "sentiment": 0
+        },
+        "Trade, Investment and Market Access": {
+          "description": "Trade agreements and frameworks, tariff/quota actions, anti-dumping/countervailing duties and dispute rulings, rules-of-origin and localization; includes FDI screening/national-security reviews of cross‑border investment.",
+          "sentiment": 0
+        },
+        "Geoeconomic Coercive Measures (Sanctions, Export Controls and Asset Actions)": {
+          "description": "Unilateral or multilateral sanctions, export controls, import bans, secondary sanctions, asset freezes/seizures, and related coercive economic statecraft.",
+          "sentiment": -5
+        },
+        "Financial Stability and Systemic Events": {
+          "description": "Bank and non‑bank stress, resolutions and rescues, liquidity facilities, circuit breakers and market dislocations, sovereign crisis responses and capital-adequacy actions.",
+          "sentiment": -7
+        },
+        "Corporate Markets and Strategy": {
+          "description": "Public/private capital‑markets activity (IPOs, follow‑ons, debt), M&A and partnerships, divestitures/spin‑offs, capital allocation (buybacks/dividends), major governance and leadership changes, strategic capex and market entries/exits.",
+          "sentiment": 2
+        },
+        "Debt and Credit Conditions": {
+          "description": "Sovereign and corporate borrowing conditions: new issuance and terms, restructurings and debt agreements, defaults/distressed exchanges, and rating outlooks/actions.",
+          "sentiment": -2
+        },
+        "Energy, Resources and Commodity Governance": {
+          "description": "Producer/cartel output and pricing decisions (e.g., OPEC+), strategic reserve releases, resource discoveries and licensing, export quotas and reference pricing for key commodities.",
+          "sentiment": 1
+        },
+        "Industrial Policy, Infrastructure and Supply Chains": {
+          "description": "Industrial‑strategy measures and subsidies (e.g., reshoring/semiconductor incentives), infrastructure and PPP programs, logistics corridors and chokepoints, export bans or controls on critical inputs, and state‑ownership changes (privatization/nationalization).",
+          "sentiment": 3
+        },
+        "Sustainable Finance, ESG and Carbon Markets": {
+          "description": "Climate‑related finance policies and taxonomies, disclosure rules, carbon pricing/ETS developments, and green/transition financing instruments.",
+          "sentiment": 3
+        },
+        "Market Regulation, Operations and Benchmarks": {
+          "description": "Competition/antitrust and sectoral licensing decisions, exchange actions (halts, suspensions, delistings), short‑selling and trading‑rule changes, index inclusions/exclusions and rebalances, and market‑infrastructure outages.",
+          "sentiment": 0
+        },
+        "Development Finance, Aid and Multilateral Programs": {
+          "description": "Official and multilateral finance (IMF/WB/RDB) including balance‑of‑payments support, program approvals/reviews, concessional loans and grants, and debt relief or restructuring frameworks.",
+          "sentiment": 3
+        },
+        "Food and Agriculture Security": {
+          "description": "Agriculture and food‑system measures with macro or geopolitical impact: export bans/quotas, stockpiling, food‑aid programs, fertilizer/crop supply shocks, and biofuel mandates.",
+          "sentiment": -1
+        }
+    }
+}
