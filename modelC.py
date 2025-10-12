@@ -33,6 +33,7 @@ fig = px.line(
 )
 
 if search:
-	st.write(searchCountry, "Max events", monthly_counts['event_count'].max())
+    print(a[a['clean_location'] == searchCountry])
+    st.write(searchCountry, monthly_counts['event_count'].max())
 
 st.plotly_chart(fig, use_container_width=True)
