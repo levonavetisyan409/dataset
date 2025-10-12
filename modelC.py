@@ -11,7 +11,6 @@ a = pd.DataFrame(data)
 a['event_date'] = pd.to_datetime(a['event_date'], format='%d/%m/%Y', errors='coerce')
 a['event_start_date'] = pd.to_datetime(a['event_start_date'], format='%d/%m/%Y', errors='coerce')
 a['event_end_date'] = pd.to_datetime(a['event_end_date'], format='%d/%m/%Y', errors='coerce')
-
 a['final_date'] = a['event_date'].fillna(a['event_start_date'])
 
 a = a.dropna(subset=['final_date'])
@@ -33,7 +32,19 @@ fig = px.line(
 )
 
 if search:
-    print(a[a['clean_location'] == searchCountry])
-    st.write(searchCountry, monthly_counts['event_count'].max())
+    if sentimentFilter == 'Cooperation':
+        st.plotly_chart(fig, use_container_width=True)
+        st.write(searchCountry, len(a[(a['clean_location'] == searchCountry) & (a['sentiment'] > 0)]))
+        st.write(a[(a['clean_location'] == searchCountry) & (a['sentiment'] > 0)])
 
-st.plotly_chart(fig, use_container_width=True)
+    if sentimentFilter == 'Conflict':
+        st.plotly_chart(fig, use_container_width=True)
+        st.write(searchCountry, len(a[(a['clean_location'] == searchCountry) & (a['sentiment'] < 0)]))
+        st.write(a[(a['clean_location'] == searchCountry) & (a['sentiment'] < 0)])
+
+    if sentimentFilter == 'Netural':
+        st.plotly_chart(fig, use_container_width=True)
+        st.write(searchCountry, len(a[(a['clean_location'] == searchCountry) & (a['sentiment'] == 0)]))
+        st.write(a[(a['clean_location'] == searchCountry) & (a['sentiment'] == 0)])
+else:
+    st.plotly_chart(fig, use_container_width=True)
