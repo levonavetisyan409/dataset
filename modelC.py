@@ -21,7 +21,7 @@ monthly_counts['final_date'] = monthly_counts['final_date'].dt.to_timestamp()
 st.title("📈 Event Count Over Time")
 st.sidebar.title("Filters")
 searchCountry = st.sidebar.selectbox("Search By countries", sorted(a['clean_location'].dropna().unique()))
-sentimentFilter = st.sidebar.selectbox("Event type",("Conflict", "Cooperation", "Netural"))
+sentimentFilter = st.sidebar.selectbox("Event type",("Conflict", "Cooperation", "Netural", "All"))
 search = st.sidebar.button("Search")
 
 fig = px.line(
@@ -33,18 +33,23 @@ fig = px.line(
 
 if search:
     if sentimentFilter == 'Cooperation':
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, key="chart_coop")
         st.write(searchCountry, len(a[(a['clean_location'] == searchCountry) & (a['sentiment'] > 0)]))
         st.write(a[(a['clean_location'] == searchCountry) & (a['sentiment'] > 0)])
 
     if sentimentFilter == 'Conflict':
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, key="chart_conflict")
         st.write(searchCountry, len(a[(a['clean_location'] == searchCountry) & (a['sentiment'] < 0)]))
         st.write(a[(a['clean_location'] == searchCountry) & (a['sentiment'] < 0)])
 
     if sentimentFilter == 'Netural':
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, key="chart_net")
         st.write(searchCountry, len(a[(a['clean_location'] == searchCountry) & (a['sentiment'] == 0)]))
         st.write(a[(a['clean_location'] == searchCountry) & (a['sentiment'] == 0)])
+
+if sentimentFilter == 'All':
+    st.plotly_chart(fig, use_container_width=True, key="All")
+    st.write(searchCountry, len(a[a['clean_location'] == searchCountry]))
+    st.write(a[a['clean_location'] == searchCountry])
 else:
     st.plotly_chart(fig, use_container_width=True)
