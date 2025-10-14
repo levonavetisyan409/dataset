@@ -1,4 +1,5 @@
 import json
+import os
 import calendar
 import pandas as pd
 import streamlit as st
@@ -25,6 +26,24 @@ a['event_end_date'] = pd.to_datetime(a['event_end_date'], format='%d/%m/%Y', err
 a['final_date'] = a['event_date'].fillna(a['event_start_date'])
 a['event_type'] = a['sentiment'].apply(get_event_type)
 
+ententiesGroup = []
+ententiesNameGroup = set()
+ententiesGroupClean = []
+
+os.system('cls')
+
+for i in sorted(a['entities_names'].dropna().unique()):
+    rest = i.find(';')
+    ententiesName = i[:rest]
+    ententiesGroup.append(ententiesName)
+
+for i in ententiesGroup:
+    if i in ententiesName:
+        ententiesGroupClean.append(i)
+    else:
+        ententiesNameGroup.add(i)
+
+ententiesNameGroup = pd.Series(list(ententiesNameGroup))
 a = a.dropna(subset=['final_date'])
 
 monthly_counts = a.groupby(a['final_date'].dt.to_period('M')).size().reset_index(name='event_count')
@@ -37,8 +56,8 @@ a['month'] = a['final_date'].dt.month
 groupedByType = a.groupby([a['final_date'].dt.to_period('M'), 'event_type']).size().reset_index(name='event_count')
 
 st.sidebar.title("Filters")
-searchCountry = st.sidebar.selectbox("Search By countries", sorted(a['clean_location'].dropna().unique()))
-searchEntity = st.sidebar.selectbox("Search By Entities", ["All"] + sorted(a['entities_names'].dropna().unique()))
+searchCountry = st.sidebar.selectbox("Search By Location", sorted(a['clean_location'].dropna().unique()))
+searchEntity = st.sidebar.selectbox("Search By Entities", ["All"] + sorted(ententiesNameGroup.dropna().unique()))
 sentimentFilter = st.sidebar.selectbox("Event type",("All","Conflict", "Cooperation", "Netural"))
 search = st.sidebar.button("Search")
 
