@@ -34,20 +34,23 @@ max_date = map_df['event_date_dt'].max()
 
 st.sidebar.title("Event Location Map")
 st.sidebar.header("Filters")
-sentimentFilter = st.sidebar.selectbox("Event type",("Conflict", "Cooperation", "Netural"))
-dateFilter = st.sidebar.slider("Date", min_date.year, max_date.year, max_date.year)
+sentimentFilter = st.sidebar.selectbox("Event type",("All", "Conflict", "Cooperation", "Netural"))
+dateFilter = st.sidebar.text_input("Date")
 applyFilter = st.sidebar.button("Apply")
 
 
 if applyFilter:
     if sentimentFilter == "Conflict":
         filtered_df = map_df[map_df['sentiment'] < 0]
-    elif sentimentFilter == "Netural":
+    if sentimentFilter == "Netural":
         filtered_df = map_df[map_df['sentiment'] == 0]
-    else:
+    if sentimentFilter == "Cooperation":
         filtered_df = map_df[map_df['sentiment'] > 0]
+    else:
+        filtered_df = map_df
+
     
-    filtered_df = filtered_df[filtered_df['event_date_dt'].dt.year == dateFilter]
+    filtered_df = filtered_df[filtered_df['event_date_dt'].dt.year == int(dateFilter)]
     
     st.write(f"Selected: {sentimentFilter} events from {dateFilter}")
 else:
