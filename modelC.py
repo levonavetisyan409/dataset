@@ -30,8 +30,6 @@ ententiesGroup = []
 ententiesNameGroup = set()
 ententiesGroupClean = []
 
-os.system('cls')
-
 for i in sorted(a['entities_names'].dropna().unique()):
     rest = i.find(';')
     ententiesName = i[:rest]
@@ -56,7 +54,7 @@ a['month'] = a['final_date'].dt.month
 groupedByType = a.groupby([a['final_date'].dt.to_period('M'), 'event_type']).size().reset_index(name='event_count')
 
 st.sidebar.title("Filters")
-searchCountry = st.sidebar.selectbox("Search By Location", sorted(a['clean_location'].dropna().unique()))
+searchCountry = st.sidebar.selectbox("Search By Location",["All"] + sorted(a['clean_location'].dropna().unique()))
 searchEntity = st.sidebar.selectbox("Search By Entities", ["All"] + sorted(ententiesNameGroup.dropna().unique()))
 sentimentFilter = st.sidebar.selectbox("Event type",("All","Conflict", "Cooperation", "Netural"))
 search = st.sidebar.button("Search")
@@ -71,17 +69,22 @@ if search:
     monthly_counts_filtered = filtered.groupby(filtered['final_date'].dt.to_period('M')).size().reset_index(name='event_count')
     monthly_counts_filtered['final_date'] = monthly_counts_filtered['final_date'].dt.to_timestamp()
 
+    if searchCountry == "All":
+        baseFilter = a
+    else:
+        baseFilter = a[a['clean_location']==searchCountry]
+    
     st.title(f"📈 Event Count Over Time For {searchCountry}")
     st.write(f"Avarage Sentimet for {searchCountry} is {avgSentiment}")
 
     if sentimentFilter == 'Cooperation':
-        filtered_data = a[(a['clean_location'] == searchCountry) & (a['sentiment'] > 0)]
+        filtered_data = baseFilter[baseFilter['sentiment'] > 0]
     if sentimentFilter == 'Conflict':
-        filtered_data = a[(a['clean_location'] == searchCountry) & (a['sentiment'] < 0)]
+        filtered_data = baseFilter[baseFilter['sentiment'] < 0]
     if sentimentFilter == 'Netural':
-        filtered_data = a[(a['clean_location'] == searchCountry) & (a['sentiment'] == 0)]
+        filtered_data = baseFilter[baseFilter['sentiment'] == 0]
     if sentimentFilter == 'All':
-        filtered_data = a[(a['clean_location'] == searchCountry)]
+        filtered_data = baseFilter
 
     if searchEntity != "All":
         filtered_data = filtered_data[filtered_data['entities_names'].str.contains(searchEntity, na=False)]
@@ -91,7 +94,7 @@ if search:
     monthly_sentiment = filtered_data.groupby(a['final_date'].dt.to_period('M'))['sentiment'].mean().reset_index()
     monthly_sentiment['final_date'] = monthly_sentiment['final_date'].dt.to_timestamp()
 
-    groupedByType = filtered.groupby([filtered['final_date'].dt.to_period('M'), 'event_type']).size().reset_index(name='event_count')
+    groupedByType = filtered_data.groupby([filtered_data['final_date'].dt.to_period('M'), 'event_type']).size().reset_index(name='event_count')
     groupedByType['final_date'] = groupedByType['final_date'].dt.to_timestamp()
 
     filtered_data['month'] = filtered_data['final_date'].dt.month
